@@ -12,30 +12,41 @@ function TodoItem({ todo, editTodo, deleteTodo }: TodoItemProps) {
   const [newText, setNewText] = useState(todo.text);
 
   const handleSave = () => {
-    editTodo(todo.id, newText);
+    if (newText.trim()) {
+      editTodo(todo.id, newText.trim());
+      setIsEditing(false);
+    }
+  };
+
+  const handleCancel = () => {
+    setNewText(todo.text);
     setIsEditing(false);
   };
 
   return (
-    <div className="todo-item">
+    <div className={`todo-item ${isEditing ? "editing" : ""}`}>
       {isEditing ? (
         <>
-          <input 
+          <input
+            autoFocus
             value={newText}
             onChange={(e) => setNewText(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleSave()}
           />
-          <button onClick={handleSave}>Save</button>
+          <div className="todo-actions">
+            <button className="save" onClick={handleSave}>Save</button>
+            <button className="cancel" onClick={handleCancel}>Cancel</button>
+          </div>
         </>
       ) : (
         <>
-          <p>{todo.text}</p>
-          <button onClick={() => setIsEditing(true)}>Edit</button>
+          <p className="todo-text">{todo.text}</p>
+          <div className="todo-actions">
+            <button className="edit" onClick={() => setIsEditing(true)}>Edit</button>
+            <button className="delete" onClick={() => deleteTodo(todo.id)}>Delete</button>
+          </div>
         </>
       )}
-
-      <button onClick={() => deleteTodo(todo.id)} className="delete">
-        Delete
-      </button>
     </div>
   );
 }

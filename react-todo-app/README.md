@@ -46,13 +46,13 @@ src/
 1. Clone the repository:
 
 ```
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+git clone https://github.com/nalonix/A2SV-Submissions/tree/main/react-todo-app
 ```
 
 2. Navigate to the project folder:
 
 ```
-cd todo-app
+cd react-todo-app
 ```
 
 3. Install dependencies:
@@ -75,9 +75,14 @@ http://localhost:5173/
 
 ---
 
-## 📄 Screenshots (Optional)
+## 📄 Screenshots
 
-You can add screenshots of your app here.
+![Todo App Screenshot](/public/ss/image.png)
+![Todo App Screenshot](/public/ss/imagecopy.png)
+![Todo App Screenshot](/public/ss/imagecopy2.png)
+![Todo App Screenshot](/public/ss/imagecopy3.png)
+![Todo App Screenshot](/public/ss/imagecopy4.png)
+
 
 ---
 

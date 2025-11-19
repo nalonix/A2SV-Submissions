@@ -10,13 +10,13 @@ function TodoForm({ addTodo }: TodoFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!text.trim()) return;
-    addTodo(text);
+    addTodo(text.trim());
     setText("");
   };
 
   return (
     <form onSubmit={handleSubmit} className="todo-form">
-      <input 
+      <input
         type="text"
         placeholder="Enter a task..."
         value={text}

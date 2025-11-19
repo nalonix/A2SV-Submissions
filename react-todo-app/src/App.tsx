@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TodoForm from "./components/TodoForm";
 import TodoItem from "./components/TodoItem";
+import "./App.css";
 
 export interface Todo {
   id: number;
@@ -15,27 +16,39 @@ function App() {
   };
 
   const editTodo = (id: number, newText: string) => {
-    setTodos(todos.map(todo => (todo.id === id ? { ...todo, text: newText } : todo)));
+    setTodos(
+      todos.map((todo) => (todo.id === id ? { ...todo, text: newText } : todo))
+    );
   };
 
   const deleteTodo = (id: number) => {
-    setTodos(todos.filter(todo => todo.id !== id));
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   return (
-    <div className="app">
-      <h1>Todo List</h1>
-      <TodoForm addTodo={addTodo} />
+    <div className="app-container">
+      <h1 className="title">My Tasks</h1>
+
+      <div className="form-container">
+        <TodoForm addTodo={addTodo} />
+      </div>
 
       <div className="todo-list">
-        {todos.map(todo => (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            editTodo={editTodo}
-            deleteTodo={deleteTodo}
-          />
-        ))}
+        {todos.length === 0 ? (
+          <div className="empty-state">
+            <p>No tasks yet</p>
+            <span>Add something above 👆</span>
+          </div>
+        ) : (
+          todos.map((todo) => (
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              editTodo={editTodo}
+              deleteTodo={deleteTodo}
+            />
+          ))
+        )}
       </div>
     </div>
   );
