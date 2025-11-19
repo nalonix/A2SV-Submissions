@@ -77,11 +77,11 @@ http://localhost:5173/
 
 ## 📄 Screenshots
 
-![Todo App Screenshot](react-todo-app/public/ss/image.png)
-![Todo App Screenshot](react-todo-app/public/ss/imagecopy.png)
-![Todo App Screenshot](react-todo-app/public/ss/imagecopy2.png)
-![Todo App Screenshot](react-todo-app/public/ss/imagecopy3.png)
-![Todo App Screenshot](react-todo-app/public/ss/imagecopy4.png)
+![Todo App Screenshot](./public/ss/image.png)
+![Todo App Screenshot](./public/ss/imagecopy.png)
+![Todo App Screenshot](./public/ss/imagecopy2.png)
+![Todo App Screenshot](./public/ss/imagecopy3.png)
+![Todo App Screenshot](./public/ss/imagecopy4.png)
 
 
 ---
