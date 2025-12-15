@@ -53,13 +53,13 @@ This project implements a complete user authentication flow using **Next.js**, *
 Below are screenshots demonstrating the authentication flow:
 
 ### 1. Home Page & Signup
-![Home/Signup](/ss/image.png)
+![Home/Signup](/public/ss/image.png)
 
 ### 2. Sign In
-![Sign In](/ss/image2.png)
+![Sign In](/public/ss/image2.png)
 
 ### 3. Verify Email (OTP)
-![Verify Email](/ss/image3.png)
+![Verify Email](/public/ss/image3.png)
 
 ### 4. Authenticated Session
-![Authenticated](/ss/image4.png)
+![Authenticated](/public/ss/image4.png)
